@@ -1,0 +1,160 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Parkinsans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva:wght@100..400&family=Playwrite+HU:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Revolution&family=Signika:wght@300..700&family=Sixtyfour+Convergence&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yuji+Mai&display=swap');
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-image: url(./backgroundImg1.jpg);
+    background-position: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* FORM CONTAINER  */
+.form_container {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+/* INPUT GROUPS  */
+.input_group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 80%;
+    margin-inline: auto;
+}
+
+.input_group label {
+    font-family: "Ubuntu", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: normal;
+    color: #edf2f4;
+}
+
+.input_group input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+    padding-left: 20px;
+    
+    padding: 10px;
+}
+
+.form_container button {
+    outline: none;
+    border: none;
+    width: 200px;
+    height: 40px;
+    margin-inline: auto;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #edf2f4;
+    background-color: #283618;
+}
+
+.input_group span {
+    color: #9d0208;
+    font-weight: 600;
+    display: none;
+}
+
+/* ALERT BOXES  */
+.alertBox {
+    width: 200px;
+    height: 0px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: #ffffff22;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.alertBox.show {
+    height: 100px;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+.successfullBox i {
+    color: #03045e;
+}
+
+.errorBox i {
+    color: #d00000;
+}
+
+.alertBox .Icon i {
+    font-size: 1rem;
+}
+
+.alertBox p {
+    font-size: 1rem;
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #edf2f4;
+}
+
+.closeBtn {
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* FOR BIG MOBILE AND OTHER SCREENS  */
+@media all and (min-width: 768px) {
+
+    .form_container {
+        width: 400px;
+        height: 500px;
+    }
+
+    .input_group label {
+        font-size: 1.3rem;
+    }
+
+    .input_group input {
+        width: 300px;
+        height: 40px;
+    }
+
+    .alertBox .Icon i {
+        font-size: 1.3rem;
+    }
+
+    .alertBox p {
+        font-size: 1.3rem;
+    }
+
+}

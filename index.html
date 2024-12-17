@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form class="form_container">
+            <div class="input_group">
+                <label for="userName">User Name</label>
+                <input type="text" id="userName" name="user name"  placeholder="Enter the name" />
+                <span id="nameerrorMsg" class="nameerrorMsg">enter the name</span>
+            </div>
+            <div class="input_group">
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="user email"  placeholder="Enter the  Email Address" />
+                <span id="emailerrorMsg" class="emailerrorMsg">enter the correct email address</span>
+
+            </div>
+            <div class="input_group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="user password"  placeholder="Enter the minimum 8 characters" />
+                <span id="passwordError" class="passworderrorMsg">enter minimum 8 characters</span>
+
+            </div>
+            <button type="submit" id="submitBtn" class="submitBtn">SUBMIT</button>
+        </form>
+
+        <div id="successfullBox" class="successfullBox alertBox ">
+            <div class="Icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <p class="message">Successfull</p>
+            <button type="button" class="closeBtn">Close</button>
+
+        </div>
+        <div id="errorBox" class="errorBox alertBox">
+            <div class="Icon">
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <p class="message">Failed!</p>
+            <button type="button"  class="closeBtn">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
