@@ -4,6 +4,7 @@ This project is a simple Form Validation system implemented using HTML, CSS, and
 
 
 ## Preivew 📸
+Open the project click [here](https://naveenkumar-developer.github.io/formValidationWithRWD/)
 
 ![form image](./formValidationWithRWD.png)
 
